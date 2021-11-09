@@ -72,3 +72,5 @@ yarn.lock
 
 # Secrets
 .env*
+
+.vercel

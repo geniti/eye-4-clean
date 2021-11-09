@@ -149,7 +149,14 @@ export const blocks = `
     _type,
     _key,
     product->${product}
+  },
+  _type == 'tailormade' => {
+    _type,
+    _key,
+    klaviyoListID,
+    submit,
   }
+
 `
 
 // Construct our content "modules" GROQ
@@ -170,6 +177,60 @@ export const modules = `
         ${blocks}
       }
     }
+  },
+  _type == 'tailor-form' => {
+    _type,
+    _key,
+    formID,
+    submit,
+    successMessage,
+    errorMessage,
+    successPage,
+    errorPage,
+    successPageSlug,
+    errorPageSlug,
+    successPageURL,
+    errorPageURL,
+    successPageTitle,
+    errorPageTitle,
+    successPageDescription,
+    errorPageDescription,
+    successPageImage,
+    errorPageImage,
+    successPageImageAlt,
+    errorPageImageAlt,
+  },
+  _type == 'newsletter' => {
+    _type,
+    _key,
+    klaviyoListID,
+            submit,
+            successMsg[]{
+              ${ptContent}
+            },
+            errorMsg[]{
+              ${ptContent}
+            },
+            terms[]{
+              ${ptContent}
+            }
+          
+  },
+  _type == 'tailormade' => {
+    _type,
+    _key,
+    klaviyoListID,
+            submit,
+            successMsg[]{
+              ${ptContent}
+            },
+            errorMsg[]{
+              ${ptContent}
+            },
+            terms[]{
+              ${ptContent}
+            }
+          
   },
   _type == 'hero' => {
     _type,
@@ -223,6 +284,7 @@ export const modules = `
       ${imageMeta}
     }
   },
+  
   _type == 'productHero' => {
     _type,
     _key,
@@ -379,6 +441,30 @@ export const site = `
       touchIcon
     },
     "gtmID": *[_type == "generalSettings"][0].gtmID,
+  }
+`
+
+// Construct our "newsletter" GROQ
+export const newsletter = `
+  "newsletter": {
+    "id": "footer",
+    "klaviyoListID": *[_type == "newsletter"][0].klaviyoListID,
+    "submit": *[_type == "newsletter"][0].submit,
+    "successMsg[]{
+      ${ptContent}
+    }": *[_type == "newsletter"][0].successMsg[]{
+      ${ptContent}
+    },
+    "errorMsg[]{
+      ${ptContent}
+    }": *[_type == "newsletter"][0].errorMsg[]{
+      ${ptContent}
+    },
+    "terms[]{
+      ${ptContent}
+    }": *[_type == "newsletter"][0].terms[]{
+      ${ptContent}
+    }
   }
 `
 

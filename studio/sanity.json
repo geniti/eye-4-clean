@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "ieasd5lg",
+    "projectId": "dan059i0",
     "dataset": "production"
   },
   "project": {
-    "name": "HULL",
+    "name": "Eye4Clean",
     "basePath": "/studio"
   },
   "plugins": [
@@ -23,9 +23,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

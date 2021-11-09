@@ -8,6 +8,7 @@ import NotFoundPage from '@pages/404'
 
 import Layout from '@components/layout'
 import { Module } from '@components/modules'
+import Newsletter from '@components/newsletter'
 
 const Page = ({ data }) => {
   const router = useRouter()

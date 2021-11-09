@@ -5,6 +5,7 @@ import { getStaticPage, queries } from '@data'
 
 import Layout from '@components/layout'
 import { Module } from '@components/modules'
+import TailorForm from '@components/tailor-form'
 
 const Home = ({ data }) => {
   const { site, page } = data
@@ -23,6 +24,7 @@ const Home = ({ data }) => {
       {page.modules?.map((module, key) => (
         <Module key={key} index={key} module={module} />
       ))}
+      <TailorForm />
     </Layout>
   )
 }

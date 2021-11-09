@@ -6,9 +6,9 @@ import { useHasMounted } from '@lib/helpers'
 import Swatch from '@components/swatch'
 
 const themes = [
-  { title: 'Light Mode', name: 'light', color: { hex: '#f4f4f0' } },
-  { title: 'Dark Mode', name: 'dark', color: { hex: '#000000' } },
-  { title: 'Metal Mode', name: 'metal', color: { hex: '#FB1B15' } },
+  { title: 'Licht', name: 'light', color: { hex: '#f4f4f0' } },
+  { title: 'Donker', name: 'dark', color: { hex: '#000000' } },
+  { title: 'Kleur', name: 'metal', color: { hex: '#ffdf00' } },
 ]
 
 const ThemeSwitch = () => {

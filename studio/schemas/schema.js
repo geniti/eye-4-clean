@@ -8,7 +8,6 @@ import productVariant from './documents/shopify-variant'
 import collection from './documents/shopify-collection'
 import filter from './documents/filter'
 import solidColor from './documents/color'
-
 import generalSettings from './documents/settings-general'
 import cookieSettings from './documents/settings-cookie'
 import promoSettings from './documents/settings-promo'
@@ -27,6 +26,8 @@ import dividerPhoto from './modules/divider-photo'
 import newsletter from './modules/newsletter'
 import productHero from './modules/product-hero'
 import collectionGrid from './modules/collection-grid'
+import tailormade from './modules/tailormade'
+import tailorForm from './modules/tailor-form'
 
 // Object types
 import gridColumn from './objects/grid-column'
@@ -95,6 +96,8 @@ export default createSchema({
     newsletter,
     productHero,
     collectionGrid,
+    tailormade,
+    tailorForm,
 
     /* ----------------------- */
     /* 3: Generic Object types */

@@ -4,6 +4,9 @@ import dynamic from 'next/dynamic'
 const Grid = dynamic(() => import('./grid'))
 const Hero = dynamic(() => import('./hero'))
 const Marquee = dynamic(() => import('./marquee'))
+const Newsletter = dynamic(() => import('../newsletter'))
+const Tailormade = dynamic(() => import('../tailormade'))
+const TailorForm = dynamic(() => import('../tailor-form'))
 const DividerPhoto = dynamic(() => import('./divider-photo'))
 const ProductHero = dynamic(() => import('./product-hero'))
 const Collection = dynamic(() => import('./collection-grid'))
@@ -25,6 +28,12 @@ export const Module = ({
       return <Hero index={index} data={module} />
     case 'marquee':
       return <Marquee index={index} data={module} />
+    case 'newsletter':
+      return <Newsletter index={index} data={module} />
+    case 'tailormade':
+      return <Tailormade index={index} data={module} />
+    case 'tailorform':
+      return <TailorForm index={index} data={module} />
     case 'dividerPhoto':
       return <DividerPhoto index={index} data={module} />
     case 'productHero':
